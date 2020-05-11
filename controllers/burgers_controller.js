@@ -1,11 +1,17 @@
 const express = require('express')
-const app = express()
+
 
 
 const router = express.Router()
 
-
+let burger = require('../models/burger.js')
 router.get('/', async function (req, res) {
-    const data = await Cat.findAll()
-    res.render('index', { cats: data })
+   burger.selectAll( function(data) {
+
+console.log(burgerObject)
+   })
+   
   })
+
+
+  module.exports = router
