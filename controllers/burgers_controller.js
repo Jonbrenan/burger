@@ -6,10 +6,9 @@ const router = express.Router()
 
 let burger = require('../models/burger.js')
 router.get('/', async function (req, res) {
-   burger.selectAll( function(data) {
-
-console.log(burgerObject)
-   })
+   const burgerData = await burger.findAll()
+   
+   res.render("index", {burgerData: burgerData})
    
   })
 

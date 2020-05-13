@@ -1,9 +1,6 @@
 const orm = require('../config/orm')
 
-orm
-  .selectAll('burgers')
-  .then(rows => console.table(rows))
-  .catch(console.error)
+
 
 orm
   .insertOne('burgers', 'burger_name', 'big_burger')
@@ -14,3 +11,14 @@ orm
   .updateOne('burgers', 'devoured', 'devoured')
   .then(rows => console.table(rows))
   .catch(console.error)
+
+
+  const burger = {findAll: function () {
+    return orm
+  .selectAll('burgers')
+  .then(rows => rows)
+  .catch(console.error)
+  }}
+
+
+  module.exports = burger

@@ -19,6 +19,6 @@ connection.connect (function(error) {
   } console.log('connected as ID', + connection.threadId)
 }) 
 
-connection.promise()
 
-module.exports = connection
+
+module.exports = connection.promise()

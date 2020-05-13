@@ -26,7 +26,7 @@ const orm = {
 
 
   updateOne: async function (table, column1, column2) {
-    const sql = 'UPDATE ?? SET ?? = "true" WHERE ?? = 1 '
+    const sql = 'UPDATE ?? SET ?? = 1 WHERE ?? = 1 '
     const [rows] = await connection.query(sql, [table, column1, column2])
     return rows
   },
