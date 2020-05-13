@@ -14,12 +14,10 @@
             </div>
             <h2>Available Burgers</h2>
             <ul>
-                <li>This is where a burger would go<button type="button" class="btn btn-primary">Eat Burger</button>
-                </li>
-                <li>This is where a burger would go<button type="button" class="btn btn-primary">Eat Burger</button>
-                </li>
-                <li>This is where a burger would go<button type="button" class="btn btn-primary">Eat Burger</button>
-                </li>
+                  {{#each burgerData}}
+            <li>{{this.burger_name}}</li>
+            
+            {{/each}}
             </ul>
 
             <br>
@@ -33,9 +31,7 @@
 
         </div>
         <pre>
-            {{#each burgerData}}
-            {{this.burger_name}}
-            {{/each}}
+           
         </pre>
     </div>
 
